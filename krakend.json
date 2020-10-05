@@ -1,0 +1,1687 @@
+{
+  "version": 2,
+  "extra_config": {},
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "name": "Wordpress API Gateway",
+  "port": 80,
+  "tls": {
+    "public_key": "/path/to/cert.pem",
+    "private_key": "/path/to/key.pem"
+  },
+  "read_timeout": "",
+  "idle_timeout": "",
+  "endpoints": [
+    {
+      "endpoint": "/posts",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{pid}/revisions",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{pid}/revisions",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{pid}/revisions/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{pid}/revisions/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{pid}/autosaves",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{pid}/autosaves",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{pid}/autosaves",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/posts/{pid}/autosaves",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{pid}/autosaves/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/autosaves/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },{
+      "endpoint": "/pages",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },{
+      "endpoint": "/pages",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{pid}/revisions",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{pid}/revisions",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{pid}/revisions/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{pid}/revisions/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{pid}/revisions/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{pid}/revisions/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{pid}/autosaves",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{pid}/autosaves",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{pid}/autosaves",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{pid}/autosaves",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/pages/{pid}/autosaves/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/pages/{pid}/autosaves/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/media/{id}/post-process",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/media/{id}/post-process",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}/autosaves",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}/autosaves",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{id}/autosaves",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{id}/autosaves",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/blocks/{pid}/autosaves/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/blocks/{pid}/autosaves/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/types",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/types",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/types/{type}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/types/{type}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/statuses",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/statuses",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/statuses/{status}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/statuses/{status}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/taxonomies",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/taxonomies",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/taxonomies/{taxonomy}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/taxonomies/{taxonomy}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/categories/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/categories/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/tags/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/tags/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/me",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/me",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/me",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/me",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/me",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/me",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/me",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/me",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/users/me",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/users/me",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments/{id}",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/comments/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/comments/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/search",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/search",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/block-renderer/{name}",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/block-renderer/{name}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/settings",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/settings",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/settings",
+      "method": "POST",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/settings",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/settings",
+      "method": "PUT",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/settings",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/settings",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/settings",
+          "encoding": "json",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {}
+        }
+      ]
+    },
+    {
+      "endpoint": "/themes",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {},
+      "host": [
+        "${WORDPRESS_HOST}"
+      ],
+      "disable_host_sanitize": false,
+      "backend": [
+        {
+          "url_pattern": "/wp-json/wp/v2/themes",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ]
+    }
+  ]
+}
